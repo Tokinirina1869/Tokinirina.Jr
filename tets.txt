@@ -1,0 +1,84 @@
+sudo apt update
+sudo apt install php php-cli php-mbstring php-xml php-bcmath php-curl php-mysql php-zip php-intl unzip curl nodejs npm -y
+
+curl -sS https://getcomposer.org/installer | php
+sudo mv composer.phar /usr/local/bin/composer
+
+composer create-project laravel/laravel mon-projet
+cd mon-projet
+
+code .
+
+php artisan serve
+
+
+
+
+
+
+Tu veux un script qui :
+
+* **surveille l’état du processeur et de la RAM** (par exemple leur usage)
+* **enregistre ces infos dans un fichier**
+* puis **éteint le PC**
+
+Voici un script bash simple qui fait ça sur Ubuntu :
+
+```bash
+#!/bin/bash
+
+# Fichier de log
+LOGFILE="$HOME/etat_systeme.log"
+
+# Date et heure
+echo "=== État du système au $(date) ===" >> "$LOGFILE"
+
+# Usage CPU (moyenne sur 1 seconde)
+CPU_USAGE=$(top -bn2 | grep "Cpu(s)" | tail -n1 | awk '{print 100 - $8"%"}')
+echo "Usage CPU : $CPU_USAGE" >> "$LOGFILE"
+
+# Usage RAM
+RAM_USAGE=$(free -m | awk 'NR==2{printf "Utilisée: %sMB / Totale: %sMB (%.2f%%)\n", $3, $2, $3*100/$2 }')
+echo "Usage RAM : $RAM_USAGE" >> "$LOGFILE"
+
+echo "" >> "$LOGFILE"
+
+# Éteindre le PC
+sudo shutdown -h now
+```
+
+---
+
+### Comment l’utiliser :
+
+1. Crée un fichier script, par ex. `etat_et_off.sh`
+
+```bash
+nano etat_et_off.sh
+```
+
+2. Copie-colle le script dedans, sauvegarde et ferme.
+
+3. Rends-le exécutable :
+
+```bash
+chmod +x etat_et_off.sh
+```
+
+4. Exécute-le avec sudo (nécessaire pour shutdown) :
+
+```bash
+sudo ./etat_et_off.sh
+```
+
+---
+
+### Ce que ça fait :
+
+* Ajoute une ligne dans `~/etat_systeme.log` avec la date, l’usage CPU et RAM
+* Puis éteint l’ordinateur proprement
+
+---
+
+Si tu veux, je peux t’aider à le rendre plus sophistiqué (exemple : envoyer le log par mail, surveiller en boucle, déclencher l’extinction selon conditions).
+Dis-moi ce que tu préfères !
