@@ -1,4 +1,4 @@
-/* @import "tailwindcss"; */
+@import "tailwindcss"; 
 
 @media (prefers-color-scheme: light) {
   :root {
@@ -37,14 +37,10 @@ body{
   transform: translateY(-5px);
   transition: all 0.5s ease;
 }
-.transition{
-  transform: translateY(-5px);
-  transition: all 0.3s ease;
-  cursor: pointer;
-}
+
 .transition:hover{
-  background-color: #213547;
   border-radius: 5px;
   cursor: pointer;
+  color: #f9f9f9;
 }
 
