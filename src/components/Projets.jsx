@@ -16,7 +16,7 @@ function Projets(){
     const sendemail = (e) => {
         e.preventDefault();
 
-        emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_USER_ID')
+        emailjs.sendForm('service_cpy0mjj', 'template_20lg1ph', form.current, '8W8QRmRhPj8Aj3YCn')
         .then((result) => {
             console.log(result.text);
             alert("Email envoyé avec succès! ");
