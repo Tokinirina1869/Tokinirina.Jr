@@ -5,7 +5,6 @@ import 'bootstrap/dist/js/bootstrap.bundle.js'
 import './index.css'
 import './components/i18n';
 import Projets from './components/PortFolio'
-// import "./components/i18n"
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <Projets />

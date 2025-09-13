@@ -11,7 +11,6 @@ class Projet extends Component{
 
     render()
     {
-        // const { t } = this.props;
          return(
             <div>
                 <nav className="navbar card navbar-expand-lg navbar-dark fw-bold bg-primary fixed-top">
@@ -39,7 +38,7 @@ class Projet extends Component{
                 <div className="container mt-5" id="contacts">
                 <Contact />
                 </div>
-
+''
                 <footer className='mt-4 p-4'>
                     <Footer />
                     <hr />
