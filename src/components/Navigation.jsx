@@ -38,20 +38,16 @@ class Navigation extends Component {
     return (
       <div className="container" style={{ color: theme === "dark" ? "white" : "black" }}>
         <a href="#" className="navbar-brand d-flex align-items-center">
-          <div className="bg-success text-primary fw-bold rounded-circle d-flex justify-content-center align-items-center me-2">
-            J.R
+          <div className="bg-white text-primary fw-bold rounded-circle d-flex justify-content-center align-items-center me-1">
+            <h1 className="fw-bold text-success p-2">J.R</h1>
           </div>
           Jean Robert
         </a>
 
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded={menuState ? "true" : "false"}
-          aria-label="Toggle navigation"
+        <button className="navbar-toggler"
+          type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarNav" aria-controls="navbarNav"
+          aria-expanded={menuState ? "true" : "false"} aria-label="Toggle navigation"
           onClick={this.toggleMenu}
         >
           {menuState ? (

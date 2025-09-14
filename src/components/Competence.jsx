@@ -5,16 +5,16 @@ class Competence extends Component {
 
     render() {
         const Frameworks = [
-            {icon: <FaReact color="#61DBFB" size={30}/>,nom: "React JS", niveau: 60},
-            {icon: <FaBootstrap color="#7952B3" size={30}/>,nom: "Bootstrap", niveau: 70},
-            {icon: <SiExpress color="gray" size={30} />,nom: "Laravel", niveau: 60},
-            {icon: <SiTailwindcss color="#38B2AC" size={30}/>,nom: "Tailwind", niveau: 60}
+            {icon: <FaReact color="#61DBFB" size={30}/>,nom: "React JS", niveau: 70},
+            {icon: <FaBootstrap color="#7952B3" size={30}/>,nom: "Bootstrap", niveau: 60},
+            {icon: <SiExpress color="gray" size={30} />,nom: "Laravel", niveau: 20},
+            {icon: <SiTailwindcss color="#38B2AC" size={30}/>,nom: "Tailwind", niveau: 20}
         ];
 
         const Programmation = [
-            {icon: <SiPhp color="#777BB4" size={40}/>,nom: "PHP", niveau: 60},
-            {icon: <SiCplusplus color="#00599C" size={30}/>,nom: "C++", niveau: 70},
-            {icon: <SiHtml5 color="#E34F26" size={30}/>,nom: "HTML5", niveau: 60},
+            {icon: <SiPhp color="#777BB4" size={40}/>,nom: "PHP", niveau: 70},
+            {icon: <SiCplusplus color="#00599C" size={30}/>,nom: "C++", niveau: 40},
+            {icon: <SiHtml5 color="#E34F26" size={30}/>,nom: "HTML5", niveau: 70},
             {icon: <SiCss3 color="#1572B6" size={30} />,nom: "CSS3", niveau: 60}
         ];
 

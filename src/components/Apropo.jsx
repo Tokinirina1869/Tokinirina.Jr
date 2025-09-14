@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import image from "../assets/Toky.jpg";
+
 class Apropo extends Component {
     constructor(props) {
         super(props);
@@ -18,7 +19,16 @@ class Apropo extends Component {
         };
         return (
             <div className="container mt-2">
-                <img src={image} className="rounded-circle ms-5" alt="Tokinirina Jean Robert" width={200} height={200} style={{border: "5px solid white"}} />
+                <div className="bubble"></div>
+                <div className="bubble"></div>
+                <div className="bubble"></div>
+                <div className="bubble"></div>
+                   
+                <img src={image} className="rounded-circle relative z-10 w-full" 
+                alt="MOI" width={200} height={200} 
+                style={{border: "5px solid white"}} 
+            />
+
                 <h2 className="fw-bold tFooter">Développeur Web FullStack</h2>
                 <h3 className="text-primary mt-4 fw-bold text-center">A propos de moi</h3>
                 <p style={{textAlign: "justify"}} className="mt-3 px-3">
