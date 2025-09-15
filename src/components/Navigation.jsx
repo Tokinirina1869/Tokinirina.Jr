@@ -44,12 +44,9 @@ class Navigation extends Component {
           Jean Robert
         </a>
 
-        <button className="navbar-toggler"
-          type="button" data-bs-toggle="collapse"
-          data-bs-target="#navbarNav" aria-controls="navbarNav"
-          aria-expanded={menuState ? "true" : "false"} aria-label="Toggle navigation"
-          onClick={this.toggleMenu}
-        >
+        <button className="navbar-toggler" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarNav" aria-controls="navbarNav"aria-label="Toggle navigation"
+          aria-expanded={menuState ? "true" : "false"}  onClick={this.toggleMenu}>
           {menuState ? (
             <span style={{ fontSize: "1.5rem", color: "white" }}>&#x2715;</span>
           ) : (
@@ -61,11 +58,7 @@ class Navigation extends Component {
           <ul className="nav navbar-nav ms-auto">
             {["apropos", "formation", "projets", "competences", "contacts"].map((section) => (
               <li className="nav-item btn btn-outline-primary me-2" key={section}>
-                <a
-                  href={`#${section}`}
-                  className="nav-link btn-lg fw-bold"
-                  onClick={() => this.setState({ menuState: false })}
-                >
+                <a href={`#${section}`} className="nav-link btn-lg fw-bold" onClick={() => this.setState({ menuState: false })}>
                   {section.charAt(0).toUpperCase() + section.slice(1)}
                 </a>
               </li>

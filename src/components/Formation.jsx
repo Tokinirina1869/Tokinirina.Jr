@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Chrono } from "react-chrono";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../App.css";
+
 class Formation extends Component {
   constructor(props) {
     super(props);

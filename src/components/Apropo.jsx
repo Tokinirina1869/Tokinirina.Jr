@@ -18,16 +18,15 @@ class Apropo extends Component {
             borderRadius : "10px",  
         };
         return (
-            <div className="container mt-2">
+            <div className="container mt-5">
                 <div className="bubble"></div>
                 <div className="bubble"></div>
                 <div className="bubble"></div>
                 <div className="bubble"></div>
                    
-                <img src={image} className="rounded-circle relative z-10 w-full" 
-                alt="MOI" width={200} height={200} 
-                style={{border: "5px solid white"}} 
-            />
+                <img src={image} className="rounded-circle" 
+                alt="MOI" width={200} height={200} style={{border: "5px solid white"}} 
+                />
 
                 <h2 className="fw-bold tFooter">Développeur Web FullStack</h2>
                 <h3 className="text-primary mt-4 fw-bold text-center">A propos de moi</h3>
